@@ -19,3 +19,59 @@ const products = [
 
 const promotionCode = "";
 // เริ่มเขียนโค้ดตรงนี้
+function calculateTotalPrice(product,promotionCode){
+  if(promotionCode === "SALE20"){
+    if(product === "เสื้อยืด"){
+      return (products[0].price*products[0].quantity)-(products[0].price*products[0].quantity)*0.2 
+    }else if(product === "กางเกงยีนส์"){
+      return (products[1].price*products[1].quantity)-(products[1].price*products[1].quantity)*0.2 
+    }else if(product === "เสื้อเชิ้ต"){
+      return (products[2].price*products[2].quantity)-(products[2].price*products[2].quantity)*0.2 
+    }
+    
+  }else if(promotionCode === "SALE50"){
+    if(product === "เสื้อยืด"){
+      return (products[0].price*products[0].quantity)-(products[0].price*products[0].quantity)*0.5
+    }else if(product === "กางเกงยีนส์"){
+      return (products[1].price*products[1].quantity)-(products[1].price*products[1].quantity)*0.5 
+    }else if(product === "เสื้อเชิ้ต"){
+      return (products[2].price*products[2].quantity)-(products[2].price*products[2].quantity)*0.5 
+    }
+  }else if(promotionCode.includes("")){
+    if(product === "เสื้อยืด"){
+      return (products[0].price*products[0].quantity)
+    }else if(product === "กางเกงยีนส์"){
+      return (products[1].price*products[1].quantity)
+    }else if(product === "เสื้อเชิ้ต"){
+      return (products[2].price*products[2].quantity)
+    }
+  }
+}
+
+console.log(calculateTotalPrice("เสื้อยืด","SALE20"));
+console.log(calculateTotalPrice("เสื้อยืด","SALE50"));
+console.log(calculateTotalPrice("เสื้อยืด",""));
+console.log(calculateTotalPrice("เสื้อเชิ้ต","SALE20"));
+console.log(calculateTotalPrice("เสื้อเชิ้ต","SALE50"));
+console.log(calculateTotalPrice("เสื้อเชิ้ต",""));
+console.log(calculateTotalPrice("กางเกงยีนส์","SALE20"));
+console.log(calculateTotalPrice("กางเกงยีนส์","SALE50"));
+console.log(calculateTotalPrice("กางเกงยีนส์",""));
+
+
+
+
+
+/*
+console.log((products[0].price * products[0].quantity)*0.2)
+function calculateTotalPrice(products,promotionCode){
+  console.log((products.price * products.quantity)*0.2)
+  if(promotionCode === "SALE20"){
+    if(products === "เสื้อยืด"){
+      console.log(products.price * products.quantity)
+      promotionCode.inculdes("")
+    }
+  }
+}
+*/
+console.log(calculateTotalPrice("เสื้อยืด","SALE20"))
