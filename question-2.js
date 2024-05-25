@@ -12,6 +12,7 @@ let orangePrice = inventory[2].price * inventory[2].quantity
 console.log(applePrice);
 console.log(bananaPrice);
 console.log(orangePrice);
-let totalSum = applePrice+ bananaPrice+ orangePrice
+let totalSum = applePrice + bananaPrice + orangePrice
 
 console.log(`มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก ${totalSum} บาท`);
+

@@ -12,6 +12,8 @@ const myTodo = [
 myTodo[3] = { id: 4, todo: "Go to the gym" }
 myTodo.push({ id: 5, todo: "Walk the dog" })
 myTodo.pop()
-console.log(myTodo[3])
+
+console.log(myTodo);
+console.log("To-do id: 4, Go to the gym")
 
 

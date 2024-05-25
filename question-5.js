@@ -18,7 +18,46 @@ const products = [
 ];
 
 const promotionCode = "";
+
+function calculateTotalPrice(products, promotionCode) {
+  let totalPrice = 0;
+  for (let i = 0; i < products.length; i++) {
+    price = products[i].price * products[i].quantity;
+    console.log(price);
+    totalPrice = totalPrice + price;
+    console.log(totalPrice);
+  }
+
+  if (promotionCode === "SALE20") {
+    return totalPrice * 0.8;
+  } else if (promotionCode === "SALE50") {
+    return totalPrice * 0.5;
+  } else {
+    return totalPrice * 1;
+  }
+}
+console.log(calculateTotalPrice(products, ""));
+console.log(calculateTotalPrice(products,"SALE20"));
+console.log(calculateTotalPrice(products,"SALE50"));
+
+
+
+/*
+function code(acc,curr){
+  console.log(acc);
+  console.log(curr);
+  return (acc+curr.)
+}
+
+console.log(code);
+
+let result = products.reduce(code)
+console.log(result)
+
+*/
+
 // เริ่มเขียนโค้ดตรงนี้
+/*
 function calculateTotalPrice(product,promotionCode){
   if(promotionCode === "SALE20"){
     if(product === "เสื้อยืด"){
@@ -59,8 +98,7 @@ console.log(calculateTotalPrice("กางเกงยีนส์","SALE50"));
 console.log(calculateTotalPrice("กางเกงยีนส์",""));
 
 
-
-
+*/
 
 /*
 console.log((products[0].price * products[0].quantity)*0.2)
@@ -74,4 +112,4 @@ function calculateTotalPrice(products,promotionCode){
   }
 }
 */
-console.log(calculateTotalPrice("เสื้อยืด","SALE20"))
+//console.log(calculateTotalPrice("เสื้อยืด","SALE20"))
